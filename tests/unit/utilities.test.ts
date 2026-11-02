@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { localizedRoutes, routeKeys, switchLocalePath } from "@/config/site";
+import { localizedRoutes, normalizeSiteUrl, routeKeys, switchLocalePath } from "@/config/site";
 import { resolveDatabaseConfig } from "@/lib/db/config";
 import { buildLeadEmail, escapeHtml } from "@/lib/email/lead-notification";
 import { getClientIp, hashIp, leadFingerprint } from "@/lib/security/hash";
@@ -106,6 +106,21 @@ describe("lead email", () => {
     expect(html).toContain("&lt;script&gt;");
     expect(text).toContain("No indicado");
     expect(text).toContain("Referencia: id-1");
+  });
+});
+
+describe("normalizeSiteUrl", () => {
+  it.each([
+    ["https://web.up.railway.app", "https://web.up.railway.app"],
+    ["https://web.up.railway.app/", "https://web.up.railway.app"],
+    ["web.up.railway.app", "https://web.up.railway.app"],
+    ["  web.up.railway.app/  ", "https://web.up.railway.app"],
+    ['"web.up.railway.app"', "https://web.up.railway.app"],
+    ["http://localhost:3200", "http://localhost:3200"],
+    ["", "http://localhost:3000"],
+  ])("turns %j into a valid URL", (input, expected) => {
+    expect(normalizeSiteUrl(input)).toBe(expected);
+    expect(() => new URL(normalizeSiteUrl(input))).not.toThrow();
   });
 });
 

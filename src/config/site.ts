@@ -1,11 +1,18 @@
 import type { Locale } from "./i18n";
 
+/** Accepts a bare domain: a missing protocol must not fail the whole build. */
+export function normalizeSiteUrl(value = "") {
+  const url = value.trim().replace(/^["']|["']$/g, "").replace(/\/+$/, "");
+  if (!url) return "http://localhost:3000";
+  return /^https?:\/\//i.test(url) ? url : `https://${url}`;
+}
+
 // Single source of truth for the brand. Renaming the business only takes
 // changing `name` and `monogram` here (plus LEAD_EMAIL_FROM in the env).
 export const siteConfig = {
   name: "Pulido Labs",
   monogram: "PL",
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, ""),
+  url: normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL),
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "",
   // International format, digits only. The env variable overrides it.
   whatsappPhone: process.env.NEXT_PUBLIC_WHATSAPP_PHONE || "34634260374",
