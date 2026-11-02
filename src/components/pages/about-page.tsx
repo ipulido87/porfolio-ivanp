@@ -1,4 +1,5 @@
 import { JsonLd } from "@/components/layout/json-ld";
+import { LinkedInLink } from "@/components/layout/linkedin-link";
 import { PageHero } from "@/components/layout/page-hero";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
 import { FinalCta } from "@/components/sections/final-cta";
@@ -32,6 +33,10 @@ export function AboutPage({ locale }: { locale: Locale }) {
                 {paragraph}
               </p>
             ))}
+            <LinkedInLink
+              locale={locale}
+              className="inline-flex min-h-11 items-center gap-2 font-medium transition-colors hover:text-cyan"
+            />
           </Reveal>
         </div>
       </section>

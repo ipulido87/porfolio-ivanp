@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Locale } from "@/config/i18n";
 import { getRoutes, siteConfig } from "@/config/site";
 import { getContent } from "@/content";
+import { LinkedInLink } from "./linkedin-link";
 import { Logo } from "./logo";
 
 export function SiteFooter({ locale }: { locale: Locale }) {
@@ -48,6 +49,12 @@ export function SiteFooter({ locale }: { locale: Locale }) {
                 </Link>
               </li>
             ))}
+            <li>
+              <LinkedInLink
+                locale={locale}
+                className="inline-flex min-h-8 items-center gap-2 text-[0.9375rem] text-muted transition-colors hover:text-text"
+              />
+            </li>
             {siteConfig.contactEmail ? (
               <li>
                 <a

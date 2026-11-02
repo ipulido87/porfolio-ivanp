@@ -16,6 +16,7 @@ export const siteConfig = {
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "",
   // International format, digits only. The env variable overrides it.
   whatsappPhone: process.env.NEXT_PUBLIC_WHATSAPP_PHONE || "34634260374",
+  linkedinUrl: "https://www.linkedin.com/in/ivan-pulido-764011236/",
   location: { label: "Mallorca", region: "Illes Balears", country: "ES", coords: "39.57° N · 2.65° E" },
   areaServed: ["Mallorca", "España"],
 } as const;

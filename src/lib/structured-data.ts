@@ -20,6 +20,7 @@ export function organizationJsonLd(locale: Locale) {
       addressCountry: siteConfig.location.country,
     },
     knowsLanguage: locales,
+    sameAs: [siteConfig.linkedinUrl],
     ...(siteConfig.contactEmail ? { email: siteConfig.contactEmail } : {}),
   };
 }

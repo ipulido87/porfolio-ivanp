@@ -67,7 +67,13 @@ export function GlobeCanvas({ onReady }: { onReady: () => void }) {
 
     const frame = (now: number) => {
       raf = requestAnimationFrame(frame);
-      const elapsed = lastFrame === 0 ? 16 : now - lastFrame;
+      // The first frame only sets the clock: with no previous frame there is no
+      // elapsed time, and the lighter tier's frame cap would skip frames forever.
+      if (lastFrame === 0) {
+        lastFrame = now;
+        return;
+      }
+      const elapsed = now - lastFrame;
       if (tier === 1 && elapsed < LIGHT_TIER_FRAME_MS) return;
       lastFrame = now;
       // A long gap means the tab stalled, not that the globe should jump.

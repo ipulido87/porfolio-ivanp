@@ -1,4 +1,5 @@
 import { JsonLd } from "@/components/layout/json-ld";
+import { LinkedInLink } from "@/components/layout/linkedin-link";
 import { PageHero } from "@/components/layout/page-hero";
 import { WhatsAppButton } from "@/components/layout/whatsapp";
 import { Reveal } from "@/components/motion/reveal";
@@ -75,6 +76,11 @@ export async function ContactPage({ locale, searchParams }: ContactPageProps) {
                 </a>
               </p>
             ) : null}
+
+            <LinkedInLink
+              locale={locale}
+              className="inline-flex min-h-11 items-center gap-2 text-muted transition-colors hover:text-cyan"
+            />
           </aside>
         </Reveal>
       </div>

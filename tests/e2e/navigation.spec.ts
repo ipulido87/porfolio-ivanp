@@ -71,6 +71,23 @@ test("a service CTA preselects that service in the form", async ({ page }) => {
   await expect(page.getByRole("radio", { name: "Calidad y pruebas" })).toBeChecked();
 });
 
+test("LinkedIn is reachable from the footer, about and contact pages", async ({ page }) => {
+  const href = "https://www.linkedin.com/in/ivan-pulido-764011236/";
+
+  await page.goto("/");
+  const footerLink = page.getByRole("contentinfo").getByRole("link", { name: /LinkedIn/ });
+  await expect(footerLink).toHaveAttribute("href", href);
+  await expect(footerLink).toHaveAttribute("rel", /noopener/);
+
+  for (const path of ["/sobre-mi", "/contacto", "/en/about", "/en/contact"]) {
+    await page.goto(path);
+    await expect(page.getByRole("main").getByRole("link", { name: /LinkedIn/ })).toHaveAttribute("href", href);
+  }
+
+  const blocks = await page.locator('script[type="application/ld+json"]').allTextContents();
+  expect(blocks.join("")).toContain(href);
+});
+
 test("the footer exposes the legal pages", async ({ page }) => {
   await page.goto("/");
   const footer = page.getByRole("contentinfo");

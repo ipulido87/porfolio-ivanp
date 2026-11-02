@@ -81,6 +81,14 @@ test.describe("with reduced motion", () => {
 test.describe("on a phone", () => {
   test.use({ viewport: { width: 390, height: 844 }, hasTouch: true });
 
+  test("rotates, on the lighter rendering tier", async ({ page }) => {
+    await page.goto("/");
+    await expect(globe(page)).toHaveAttribute("data-ready", "true");
+    await globe(page).scrollIntoViewIfNeeded();
+
+    expect(await changedPixelRatio(page, 900)).toBeGreaterThan(0.002);
+  });
+
   test("stays inside the viewport", async ({ page }) => {
     await page.goto("/");
     await expect(globe(page)).toHaveAttribute("data-ready", "true");
