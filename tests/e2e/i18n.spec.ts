@@ -7,7 +7,7 @@ const PAGES = [
   { es: "/", en: "/en", heading: /Ideas that become/ },
   { es: "/servicios", en: "/en/services", heading: /Everything it takes/ },
   { es: "/proyectos", en: "/en/projects", heading: /What I build/ },
-  { es: "/sobre-mi", en: "/en/about", heading: /Software engineering/ },
+  { es: "/sobre-mi", en: "/en/about", heading: /AI software engineering/ },
   { es: "/contacto", en: "/en/contact", heading: /Tell me about/ },
   { es: "/privacidad", en: "/en/privacy", heading: /Privacy policy/ },
   { es: "/cookies", en: "/en/cookies", heading: /Cookie policy/ },

@@ -3,13 +3,13 @@ import type { pages as es } from "../es/pages";
 export const pages: typeof es = {
   services: {
     seo: {
-      title: "Software development, QA and consulting services",
+      title: "Custom software, AI automation and quality",
       description:
-        "Custom web development, full stack, process automation, QA, technology consulting and software maintenance for companies in Mallorca and Spain.",
+        "Custom websites and applications, AI process automation and software quality for companies in Mallorca and Spain.",
     },
     eyebrow: "Services",
     headline: [{ text: "Everything it takes" }, { text: "to make it work.", accent: true }],
-    description: "Six ways of working together, which can be combined depending on where your project is right now.",
+    description: "Three ways of working together, which can be combined depending on where your project is right now.",
     includesLabel: "What's included",
     idealForLabel: "Designed for",
     cta: "Let's talk about this service",
@@ -32,16 +32,16 @@ export const pages: typeof es = {
   },
   about: {
     seo: {
-      title: "About: QA Automation Engineer and full stack developer",
+      title: "About: QA Automation Engineer, full stack and AI",
       description:
-        "Around eight years of experience in software quality and enterprise projects, combined with full stack development to build reliable, maintainable software.",
+        "Around eight years of experience in software quality and enterprise projects, combined with full stack development and AI to build reliable, maintainable software.",
     },
   },
   contact: {
     seo: {
       title: "Contact: tell me about your project",
       description:
-        "Tell me about your idea or technical problem. Custom software development, automation, QA and consulting in Mallorca and across Spain.",
+        "Tell me about your idea or technical problem. Custom software built with AI, automation and quality in Mallorca and across Spain.",
     },
   },
 };

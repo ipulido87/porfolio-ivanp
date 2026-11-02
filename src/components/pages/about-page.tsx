@@ -38,6 +38,27 @@ export function AboutPage({ locale }: { locale: Locale }) {
 
       <section className="section-y bg-ink-2/50">
         <div className="container-site">
+          <SectionHeading
+            eyebrow={about.aiWorkflow.eyebrow}
+            title={about.aiWorkflow.title}
+            description={about.aiWorkflow.description}
+            className="mb-14"
+          />
+          <Stagger className="grid gap-4 sm:grid-cols-2">
+            {about.aiWorkflow.items.map((item) => (
+              <StaggerItem key={item.title} className="flex">
+                <article className="corner-ticks card-surface w-full p-7 sm:p-9">
+                  <h3 className="text-2xl">{item.title}</h3>
+                  <p className="mt-3 text-muted">{item.body}</p>
+                </article>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
+      <section className="section-y">
+        <div className="container-site">
           <SectionHeading eyebrow={about.advantages.eyebrow} title={about.advantages.title} className="mb-14" />
           <Stagger className="grid gap-4 sm:grid-cols-2">
             {about.advantages.items.map((item, index) => (
@@ -55,7 +76,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="section-y">
+      <section className="section-y bg-ink-2/50">
         <div className="container-site">
           <SectionHeading eyebrow={about.stack.eyebrow} title={about.stack.title} className="mb-12" />
           <dl className="border-t border-line">

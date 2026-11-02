@@ -64,11 +64,11 @@ test("the hero CTAs lead to the contact page and the services section", async ({
 
 test("a service CTA preselects that service in the form", async ({ page }) => {
   await page.goto("/servicios");
-  await page.locator("#qa-y-automatizacion-de-pruebas").getByRole("link", { name: "Hablemos de este servicio" }).click();
+  await page.locator("#calidad-para-software-con-ia").getByRole("link", { name: "Hablemos de este servicio" }).click();
 
   await expect(page).toHaveURL(/servicio=qa/);
   await goToProjectStep(page);
-  await expect(page.getByRole("radio", { name: "QA y pruebas" })).toBeChecked();
+  await expect(page.getByRole("radio", { name: "Calidad y pruebas" })).toBeChecked();
 });
 
 test("the footer exposes the legal pages", async ({ page }) => {

@@ -2,19 +2,19 @@ import type { home as es } from "../es/home";
 
 export const home: typeof es = {
   seo: {
-    title: "Custom software development in Mallorca and Spain",
+    title: "Custom software built with AI in Mallorca and Spain",
     description:
-      "Custom web applications, process automation, QA and technology consulting for startups, SMEs and companies in Mallorca and across Spain.",
+      "Custom websites and applications built with AI, AI process automation and software quality for startups, SMEs and companies in Mallorca and across Spain.",
   },
   hero: {
-    eyebrow: "Independent software engineering studio",
+    eyebrow: "Software built with AI and verified with engineering",
     headline: [{ text: "Ideas that become" }, { text: "software." }, { text: "Software that works.", accent: true }],
     subtitle:
-      "I build custom web applications, automate processes and help companies create reliable, modern and scalable digital solutions.",
+      "I build custom websites and applications with AI, automate processes and verify every delivery with quality engineering, so your company gets reliable, modern and scalable software.",
     globeLabel: "Abstract digital globe with network nodes and connections in purple and cyan",
     specs: [
       { label: "Experience", value: "Around 8 years in software quality" },
-      { label: "Approach", value: "Development and QA in one profile" },
+      { label: "Approach", value: "Spec-driven, with AI and quality" },
       { label: "Coverage", value: "Mallorca and the rest of Spain" },
     ],
   },
@@ -33,8 +33,8 @@ export const home: typeof es = {
       {
         problem: "Your team repeats the same tasks by hand.",
         detail: "Copying data, preparing reports or checking emails eats up hours and invites mistakes.",
-        solution: "Automation",
-        answer: "We turn those steps into automatic processes that are monitored and easy to adjust.",
+        solution: "AI automation",
+        answer: "We turn those steps into AI-powered processes that are monitored and easy to adjust.",
       },
       {
         problem: "Your software fails, or you're afraid to touch it.",
@@ -53,8 +53,8 @@ export const home: typeof es = {
   servicesIntro: {
     anchor: "services",
     eyebrow: "Services",
-    title: "From first sketch to a system in production.",
-    description: "You can join at any stage: from an idea still taking shape to a working product that needs to improve.",
+    title: "Three things, done well.",
+    description: "Custom software, AI automation and quality. You can join at any stage: from an idea still taking shape to a working product that needs to improve.",
     cardCta: "See details",
   },
   projectsIntro: {
@@ -65,9 +65,9 @@ export const home: typeof es = {
   },
   process: {
     eyebrow: "How I work",
-    title: "A clear process, with no black boxes.",
+    title: "The specification first, then the AI.",
     description:
-      "You'll always know where things stand, what has been decided and why. The goal is to hand you something you can maintain, not something you depend on blindly.",
+      "AI moves fast, but only when it knows exactly what to build. That's why I work with spec-driven development: we agree in writing what the software must do, AI helps build it and tests prove it does what was agreed.",
     steps: [
       {
         name: "Discover",
@@ -76,22 +76,22 @@ export const home: typeof es = {
         note: "Goals and scope in writing",
       },
       {
-        name: "Design",
-        title: "Decide on the architecture and the experience",
-        body: "We define flows, key screens and the technical architecture. Important decisions are documented and justified.",
-        note: "Documented technical decisions",
+        name: "Specify",
+        title: "Write down what the software must do",
+        body: "We turn the goals into a clear specification with acceptance criteria. It's what guides the AI, and what we use to check the result.",
+        note: "A single source of truth",
       },
       {
-        name: "Build",
-        title: "Move forward in deliveries you can see",
-        body: "Development in short iterations, with versions you can try. Clean, reviewable code, with no shortcuts that turn expensive later.",
+        name: "Build with AI",
+        title: "Accelerated development, with engineering review",
+        body: "Specialised agents work from the specification while I direct and review every technical decision. We move in short deliveries you can try.",
         note: "Visible progress from the start",
       },
       {
-        name: "Test",
-        title: "Quality is part of the work",
-        body: "Automated tests are written alongside the product, not at the end. Critical flows are validated before every delivery.",
-        note: "Testing built into development",
+        name: "Verify",
+        title: "Tests decide, not gut feeling",
+        body: "Automated tests check every acceptance criterion before delivery. If something doesn't meet the specification, it isn't finished.",
+        note: "Traceability to every requirement",
       },
       {
         name: "Launch and improve",
@@ -103,10 +103,10 @@ export const home: typeof es = {
   },
   about: {
     eyebrow: "Who's behind this",
-    title: "I don't just build applications: I design them to be reliable.",
+    title: "AI writes code. I make sure it works.",
     body: [
       "I'm a QA Automation Engineer and full stack developer, with around eight years of experience in software quality and enterprise projects.",
-      "Spending so many years looking for where software breaks changes the way you build it. I think about reliability, testing and long-term maintenance from the first line of code.",
+      "Spending so many years looking for where software breaks changes the way you build it with AI. I work with specialised agents and specifications as the source of truth, and nothing counts as done until the tests prove it.",
     ],
     action: "See my profile",
   },

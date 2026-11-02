@@ -31,7 +31,7 @@ export const ui: typeof es = {
     opensInNewTab: "opens in a new tab",
   },
   footer: {
-    tagline: "Custom software, automation and quality engineering for companies that need technology to work.",
+    tagline: "Custom software built with AI, automation and quality engineering for companies that need technology to work.",
     servicesLabel: "Services",
     siteLabel: "Site",
     legal: [

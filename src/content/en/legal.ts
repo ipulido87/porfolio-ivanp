@@ -28,7 +28,7 @@ export const legalNotice: LegalDocument = {
     {
       heading: "Purpose",
       paragraphs: [
-        "This website provides information about software development, automation, software quality and technology consulting services, and allows visitors to contact the owner.",
+        "This website provides information about software development, artificial intelligence automation and software quality services, and allows visitors to contact the owner.",
       ],
     },
     {

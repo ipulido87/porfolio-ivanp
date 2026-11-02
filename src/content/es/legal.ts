@@ -22,7 +22,7 @@ export const legalNotice: LegalDocument = {
     {
       heading: "Objeto",
       paragraphs: [
-        "Este sitio web ofrece información sobre servicios de desarrollo de software, automatización, calidad de software y consultoría tecnológica, y permite contactar con el titular.",
+        "Este sitio web ofrece información sobre servicios de desarrollo de software, automatización con inteligencia artificial y calidad de software, y permite contactar con el titular.",
       ],
     },
     {

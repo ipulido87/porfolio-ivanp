@@ -56,16 +56,16 @@ test("the service options work as a radio group", async ({ page }) => {
   await page.goto("/contacto");
   await goToProjectStep(page);
 
-  await page.getByRole("radio", { name: "Desarrollo web a medida" }).focus();
+  await page.getByRole("radio", { name: "Web o aplicación a medida" }).focus();
   await page.keyboard.press("Space");
-  await expect(page.getByRole("radio", { name: "Desarrollo web a medida" })).toBeChecked();
+  await expect(page.getByRole("radio", { name: "Web o aplicación a medida" })).toBeChecked();
 
   // Radix moves focus in a timeout and selects only if the arrow is still down,
   // so the key stays held until selection is observed. A fixed delay is racy
   // on a loaded machine, where browsers run queued input before timers.
   await page.keyboard.down("ArrowRight");
-  await expect(page.getByRole("radio", { name: "Desarrollo full stack" })).toBeFocused();
-  await expect(page.getByRole("radio", { name: "Desarrollo full stack" })).toBeChecked();
+  await expect(page.getByRole("radio", { name: "Automatización con IA" })).toBeFocused();
+  await expect(page.getByRole("radio", { name: "Automatización con IA" })).toBeChecked();
   await page.keyboard.up("ArrowRight");
 });
 

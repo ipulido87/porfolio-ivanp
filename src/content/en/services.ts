@@ -3,77 +3,58 @@ import type { services as es } from "../es/services";
 
 const items: Service[] = [
   {
-    slug: "custom-web-development",
+    slug: "custom-websites-and-applications",
     value: "web",
-    title: "Custom web development",
-    summary: "Platforms, dashboards, booking systems and marketplaces built around the way you work, not the other way round.",
+    title: "Custom websites and applications",
+    summary: "Mid-scale web products, specified before they are built and developed with AI under engineering judgement.",
     description:
-      "I build web applications tailored to your business, from an internal tool to a platform for your customers. We start with what adds the most value and grow from there.",
+      "I build complete websites and applications: frontend, backend, data and deployment. First we agree in writing what the product must do; AI speeds up development and tests confirm that it does what was agreed.",
     visual: "web",
-    includes: ["Management dashboards and internal tools", "Booking and appointment systems", "Marketplaces and customer portals", "Corporate websites with custom functionality"],
+    includes: [
+      "A written specification before development",
+      "Management dashboards and internal tools",
+      "Booking systems and marketplaces",
+      "End-to-end development with React, Next.js, Node.js and PostgreSQL",
+    ],
     idealFor: "Companies and entrepreneurs who need something an off-the-shelf product can't deliver.",
   },
   {
-    slug: "full-stack-development",
-    value: "fullstack",
-    title: "Full stack development",
-    summary: "Frontend, backend, data and deployment under one technical lead.",
+    slug: "ai-automation",
+    value: "ai",
+    title: "AI automation",
+    summary: "Work that is done by hand today, handled with AI, integrations and the controls that make the result reliable.",
     description:
-      "I take care of the whole product, or join your project to strengthen whatever it needs. I work mainly with TypeScript, React, Next.js, Node.js and PostgreSQL.",
-    visual: "stack",
-    includes: ["Interfaces with React and Next.js", "REST APIs with Node.js, Express or NestJS", "Data modelling with PostgreSQL and Prisma", "Deployment with Docker and GitHub Actions"],
-    idealFor: "Startups building their product and teams that need extra technical capacity.",
-  },
-  {
-    slug: "process-automation",
-    value: "automation",
-    title: "Process automation",
-    summary: "Connect your tools and eliminate the repetitive work that is still done by hand.",
-    description:
-      "I look at how information moves through your company and automate the steps that don't need a person: third-party integrations, data syncing, alerts and reports.",
+      "I look at how your team works and automate what doesn't need a person. I combine AI models, integrations and deterministic rules, using AI only where it adds value, so the process stays reliable and its cost reasonable.",
     visual: "flow",
-    includes: ["API integrations between applications", "Data synchronisation between systems", "Automated workflows and alerts", "Automatic report generation"],
-    idealFor: "Teams that spend too much time on repetitive admin tasks.",
+    includes: [
+      "Workflows with AI agents",
+      "API integrations with your tools",
+      "Internal assistants connected to your data",
+      "Cloud or local models, depending on how sensitive the data is",
+    ],
+    idealFor: "Teams that spend too much time on repetitive tasks.",
   },
   {
-    slug: "qa-and-test-automation",
+    slug: "quality-for-ai-built-software",
     value: "qa",
-    title: "QA and test automation",
-    summary: "Catch bugs before your customers do, with tests that run on every change.",
+    title: "Quality for AI-built software",
+    summary: "Automated tests and audits that tell you your software works, whether a person or an AI wrote it.",
     description:
-      "This is my specialty. I define a quality strategy suited to your product and implement automated API, end-to-end and performance tests, built into your delivery process.",
+      "This is my specialty. I define a quality strategy based on business risk and implement tests built into your delivery process. I also audit AI-generated applications and fix what's needed to take them to production safely.",
     visual: "tests",
-    includes: ["Test strategy and quality audits", "E2E testing with Playwright or Selenium", "API testing with RestAssured", "Load testing with k6 and continuous integration"],
+    includes: [
+      "Test strategy based on business risk",
+      "E2E and API testing with Playwright and RestAssured",
+      "AI test generation from requirements",
+      "Audit and rescue of AI-built applications",
+    ],
     idealFor: "Growing products where every release feels like a risk.",
-  },
-  {
-    slug: "technology-consulting",
-    value: "consulting",
-    title: "Technology consulting",
-    summary: "A clear technical opinion before you invest, so you can decide with confidence.",
-    description:
-      "I help you make technical decisions with no conflict of interest: what to build, what to buy, which architecture to choose, or how to assess the real state of a project already under way.",
-    visual: "compass",
-    includes: ["Technical reviews of existing projects", "Scope definition and roadmap", "Architecture and technology selection", "Support for teams and suppliers"],
-    idealFor: "Anyone facing an important technology decision who wants a second opinion.",
-  },
-  {
-    slug: "software-maintenance-and-evolution",
-    value: "maintenance",
-    title: "Software maintenance and evolution",
-    summary: "Your application kept up to date, stable and ready to keep growing.",
-    description:
-      "Software needs care after launch. I take on fixing bugs, updating dependencies, improving what exists and adding features without putting what already works at risk.",
-    visual: "history",
-    includes: ["Bug fixing and continuous improvement", "Dependency and security updates", "Refactoring and technical debt reduction", "New features on existing code"],
-    idealFor: "Companies with an application in production, whether or not I built it.",
   },
 ];
 
 export const services: typeof es = {
   items,
   art: {
-    layers: ["Interface", "API", "Data"],
     tests: ["user sign-up", "checkout flow", "orders API", "performance"],
   },
 };

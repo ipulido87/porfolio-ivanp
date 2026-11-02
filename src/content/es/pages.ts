@@ -1,13 +1,13 @@
 export const pages = {
   services: {
     seo: {
-      title: "Servicios de desarrollo de software, QA y consultoría",
+      title: "Software a medida, automatización con IA y calidad",
       description:
-        "Desarrollo web a medida, full stack, automatización de procesos, QA, consultoría tecnológica y mantenimiento de software para empresas en Mallorca y España.",
+        "Webs y aplicaciones a medida, automatización de procesos con IA y calidad de software para empresas en Mallorca y España.",
     },
     eyebrow: "Servicios",
     headline: [{ text: "Todo lo que hace falta" }, { text: "para que funcione.", accent: true }],
-    description: "Seis formas de trabajar juntos, combinables entre sí según el momento en el que esté tu proyecto.",
+    description: "Tres formas de trabajar juntos, combinables entre sí según el momento en el que esté tu proyecto.",
     includesLabel: "Qué incluye",
     idealForLabel: "Pensado para",
     cta: "Hablemos de este servicio",
@@ -31,16 +31,16 @@ export const pages = {
   },
   about: {
     seo: {
-      title: "Sobre mí: QA Automation Engineer y desarrollador full stack",
+      title: "Sobre mí: QA Automation Engineer, full stack e IA",
       description:
-        "Unos ocho años de experiencia en calidad de software y proyectos empresariales, combinados con desarrollo full stack para crear software fiable y mantenible.",
+        "Unos ocho años de experiencia en calidad de software y proyectos empresariales, combinados con desarrollo full stack e IA para crear software fiable y mantenible.",
     },
   },
   contact: {
     seo: {
       title: "Contacto: cuéntame tu proyecto",
       description:
-        "Cuéntame tu idea o tu problema técnico. Desarrollo de software a medida, automatización, QA y consultoría en Mallorca y en toda España.",
+        "Cuéntame tu idea o tu problema técnico. Software a medida con IA, automatización y calidad en Mallorca y en toda España.",
     },
   },
 };

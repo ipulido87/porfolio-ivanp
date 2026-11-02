@@ -95,6 +95,17 @@ describe("translations", () => {
   });
 });
 
+describe("service offering", () => {
+  it("stays focused on three services, in both languages", () => {
+    for (const locale of locales) expect(getContent(locale).services.items).toHaveLength(3);
+  });
+
+  it("does not name employers or clients in the published copy", () => {
+    const copy = JSON.stringify(locales.map((locale) => getContent(locale)));
+    expect(copy).not.toMatch(/capitole|ferry|ferri/i);
+  });
+});
+
 describe("content integrity", () => {
   it("offers every service value in the form", () => {
     expect(contact.form.serviceOptions.map((option) => option.value).sort()).toEqual([...SERVICE_VALUES].sort());

@@ -1,18 +1,18 @@
 export const home = {
   seo: {
-    title: "Desarrollo de software a medida en Mallorca y España",
+    title: "Software a medida con IA en Mallorca y España",
     description:
-      "Aplicaciones web a medida, automatización de procesos, QA y consultoría tecnológica para startups, pymes y empresas de Mallorca y de toda España.",
+      "Webs y aplicaciones a medida construidas con IA, automatización de procesos con IA y calidad de software para startups, pymes y empresas de Mallorca y de toda España.",
   },
   hero: {
-    eyebrow: "Estudio independiente de ingeniería de software",
+    eyebrow: "Software construido con IA y verificado con ingeniería",
     headline: [{ text: "Ideas que se convierten" }, { text: "en software." }, { text: "Software que funciona.", accent: true }],
     subtitle:
-      "Desarrollo aplicaciones web a medida, automatizo procesos y ayudo a empresas a construir soluciones digitales fiables, modernas y escalables.",
+      "Construyo webs y aplicaciones a medida con IA, automatizo procesos y verifico cada entrega con ingeniería de calidad, para que tu empresa tenga software fiable, moderno y escalable.",
     globeLabel: "Globo digital abstracto con nodos y conexiones de red en morado y cian",
     specs: [
       { label: "Experiencia", value: "Unos 8 años en calidad de software" },
-      { label: "Enfoque", value: "Desarrollo y QA en un mismo perfil" },
+      { label: "Enfoque", value: "Spec-driven, con IA y calidad" },
       { label: "Ámbito", value: "Mallorca y resto de España" },
     ],
   },
@@ -31,8 +31,8 @@ export const home = {
       {
         problem: "Tu equipo repite las mismas tareas a mano.",
         detail: "Copiar datos, preparar informes o revisar correos consume horas y abre la puerta a errores.",
-        solution: "Automatización",
-        answer: "Convertimos esos pasos en procesos automáticos, supervisados y fáciles de ajustar.",
+        solution: "Automatización con IA",
+        answer: "Convertimos esos pasos en procesos con IA, supervisados y fáciles de ajustar.",
       },
       {
         problem: "Tu software actual falla o da miedo tocarlo.",
@@ -51,8 +51,8 @@ export const home = {
   servicesIntro: {
     anchor: "servicios",
     eyebrow: "Servicios",
-    title: "Del primer boceto al sistema en producción.",
-    description: "Puedes entrar en cualquier fase: desde una idea por definir hasta un producto que ya funciona y necesita mejorar.",
+    title: "Tres cosas, bien hechas.",
+    description: "Software a medida, automatización con IA y calidad. Puedes entrar en cualquier fase: desde una idea por definir hasta un producto que ya funciona y necesita mejorar.",
     cardCta: "Ver detalles",
   },
   projectsIntro: {
@@ -63,9 +63,9 @@ export const home = {
   },
   process: {
     eyebrow: "Cómo trabajo",
-    title: "Un proceso claro, sin cajas negras.",
+    title: "Primero la especificación, después la IA.",
     description:
-      "Sabrás en todo momento en qué punto estamos, qué se ha decidido y por qué. El objetivo es entregarte algo que puedas mantener, no algo de lo que dependas a ciegas.",
+      "La IA acelera mucho, pero solo si sabe exactamente qué construir. Por eso trabajo con spec-driven development: acordamos por escrito qué debe hacer el software, la IA ayuda a construirlo y las pruebas demuestran que cumple lo acordado.",
     steps: [
       {
         name: "Descubrir",
@@ -74,22 +74,22 @@ export const home = {
         note: "Objetivos y alcance por escrito",
       },
       {
-        name: "Diseñar",
-        title: "Decidir la arquitectura y la experiencia",
-        body: "Definimos flujos, pantallas clave y arquitectura técnica. Las decisiones importantes quedan documentadas y justificadas.",
-        note: "Decisiones técnicas documentadas",
+        name: "Especificar",
+        title: "Escribir qué debe hacer el software",
+        body: "Convertimos los objetivos en una especificación clara, con criterios de aceptación. Es lo que guía a la IA, y lo que sirve para comprobar el resultado.",
+        note: "Una única fuente de verdad",
       },
       {
-        name: "Construir",
-        title: "Avanzar por entregas que puedes ver",
-        body: "Desarrollo por iteraciones cortas, con versiones que puedes probar. Código limpio y revisable, sin atajos que luego cuesten caros.",
+        name: "Construir con IA",
+        title: "Desarrollo acelerado, con revisión de ingeniería",
+        body: "Agentes especializados trabajan a partir de la especificación, y yo dirijo y reviso cada decisión técnica. Avanzamos por entregas cortas que puedes probar.",
         note: "Avances visibles desde el principio",
       },
       {
-        name: "Probar",
-        title: "La calidad forma parte del trabajo",
-        body: "Las pruebas automatizadas se escriben junto al producto, no al final. Los flujos críticos se validan antes de cada entrega.",
-        note: "Pruebas integradas en el desarrollo",
+        name: "Verificar",
+        title: "Las pruebas deciden, no las sensaciones",
+        body: "Las pruebas automáticas comprueban cada criterio de aceptación antes de entregar. Si algo no cumple la especificación, no está terminado.",
+        note: "Trazabilidad con cada requisito",
       },
       {
         name: "Lanzar y mejorar",
@@ -101,10 +101,10 @@ export const home = {
   },
   about: {
     eyebrow: "Quién hay detrás",
-    title: "No solo construyo aplicaciones: las diseño para que sean fiables.",
+    title: "La IA escribe código. Yo me aseguro de que funcione.",
     body: [
       "Soy QA Automation Engineer y desarrollador full stack, con unos ocho años de experiencia en calidad de software y proyectos empresariales.",
-      "Haber pasado tantos años buscando dónde falla el software cambia la forma de construirlo. Pienso en la fiabilidad, las pruebas y el mantenimiento a largo plazo desde la primera línea de código.",
+      "Haber pasado tantos años buscando dónde falla el software cambia la forma de construirlo con IA. Trabajo con agentes especializados y especificaciones como fuente de verdad, y nada se da por bueno hasta que las pruebas lo demuestran.",
     ],
     action: "Conoce mi perfil",
   },

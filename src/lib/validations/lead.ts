@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { locales } from "@/config/i18n";
 
-export const SERVICE_VALUES = ["web", "fullstack", "automation", "qa", "consulting", "maintenance", "other"] as const;
+export const SERVICE_VALUES = ["web", "ai", "qa", "other"] as const;
 export const BUDGET_VALUES = ["under-3k", "3k-10k", "10k-25k", "over-25k", "unknown"] as const;
 
 export const STAGE_VALUES = ["idea", "stuck", "build", "support", "other"] as const;

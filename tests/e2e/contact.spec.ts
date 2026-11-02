@@ -7,7 +7,7 @@ import { goToDetailsStep, goToProjectStep } from "./helpers";
 async function fillForm(page: Page, email: string) {
   await goToProjectStep(page);
   await page.getByLabel(/^Tu proyecto/).fill(`Quiero automatizar la facturación de mi empresa. Ref ${randomUUID()}`);
-  await page.getByRole("radio", { name: "Automatización de procesos" }).click();
+  await page.getByRole("radio", { name: "Automatización con IA" }).click();
   await page.getByRole("button", { name: "Continuar" }).click();
 
   await page.getByLabel(/^Nombre/).fill("Ana García");
@@ -105,7 +105,7 @@ test("stores the lead even though email delivery is unavailable", async ({ page 
     name: "Ana García",
     company: "Empresa Ejemplo",
     stage: "build",
-    service: "automation",
+    service: "ai",
     budget: "3k-10k",
     locale: "es",
     email_status: "failed",

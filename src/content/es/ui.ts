@@ -31,7 +31,7 @@ export const ui = {
     opensInNewTab: "se abre en una pestaña nueva",
   },
   footer: {
-    tagline: "Software a medida, automatización y calidad para empresas que necesitan que la tecnología funcione.",
+    tagline: "Software a medida con IA, automatización y calidad para empresas que necesitan que la tecnología funcione.",
     servicesLabel: "Servicios",
     siteLabel: "Sitio",
     legal: [

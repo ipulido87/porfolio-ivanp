@@ -57,12 +57,9 @@ export const contact = {
       { value: "other", label: "Otra cosa" },
     ] satisfies { value: StageValue; label: string }[],
     serviceOptions: [
-      { value: "web", label: "Desarrollo web a medida" },
-      { value: "fullstack", label: "Desarrollo full stack" },
-      { value: "automation", label: "Automatización de procesos" },
-      { value: "qa", label: "QA y pruebas" },
-      { value: "consulting", label: "Consultoría tecnológica" },
-      { value: "maintenance", label: "Mantenimiento y evolución" },
+      { value: "web", label: "Web o aplicación a medida" },
+      { value: "ai", label: "Automatización con IA" },
+      { value: "qa", label: "Calidad y pruebas" },
       { value: "other", label: "Aún no lo tengo claro" },
     ] satisfies { value: ServiceValue; label: string }[],
     budgetOptions: [

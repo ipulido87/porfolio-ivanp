@@ -1,6 +1,16 @@
 export const faq = {
   items: [
     {
+      question: "¿Qué significa desarrollar con IA y spec-driven?",
+      answer:
+        "Que el proceso parte de una especificación escrita: qué debe hacer el software y cómo sabremos que lo hace. Con esa base, agentes de IA aceleran el desarrollo y las pruebas, pero yo dirijo y reviso cada decisión técnica. La IA aporta velocidad; la especificación y las pruebas aportan fiabilidad.",
+    },
+    {
+      question: "¿Qué pasa con mis datos si se usa IA?",
+      answer:
+        "Antes de empezar decidimos juntos qué datos pueden pasar por herramientas de IA y cuáles no. Cuando la información es sensible, se puede trabajar con datos de prueba o con modelos locales que se ejecutan en tu propia infraestructura.",
+    },
+    {
       question: "¿Cuánto cuesta un proyecto?",
       answer:
         "Depende del alcance, la complejidad y las integraciones necesarias. Por eso no trabajo con tarifas cerradas de catálogo: primero entiendo lo que necesitas y después te envío una propuesta por escrito, con el alcance y el presupuesto detallados. Si el presupuesto es limitado, buscamos juntos una primera versión que encaje.",
@@ -16,9 +26,9 @@ export const faq = {
         "Por supuesto. No necesitas un documento de requisitos ni conocimientos técnicos. Partimos de tu idea, la aterrizamos y definimos una primera versión realista. Si después de analizarla creo que no merece la pena construirla, te lo diré.",
     },
     {
-      question: "¿Puedes mejorar un software que ya tengo?",
+      question: "¿Puedes mejorar un software que ya tengo, aunque esté hecho con IA?",
       answer:
-        "Sí. Es habitual empezar con una revisión del estado actual: código, arquitectura, errores y riesgos. Con esa información decidimos si conviene evolucionar lo que hay, reescribir alguna parte o simplemente añadir pruebas antes de seguir avanzando.",
+        "Sí. Es habitual empezar con una revisión técnica del estado actual: código, arquitectura, errores y riesgos. Con esa información decidimos si conviene evolucionar lo que hay, reescribir alguna parte o simplemente añadir pruebas antes de seguir avanzando. También puedes contratar solo esa revisión.",
     },
     {
       question: "¿Ofreces mantenimiento después de la entrega?",

@@ -10,12 +10,9 @@ import type { Service, ServiceArtLabels } from "./types";
 // Grid placement per position. Artwork sits at the bottom of tall cards and to
 // the side of wide ones, so no two neighbours share the same composition.
 const LAYOUT = [
-  { cell: "lg:col-span-7 lg:row-span-2", art: "-mx-2 -mb-8 mt-auto pt-10 sm:-mx-0 sm:-mb-10" },
+  { cell: "lg:col-span-7 lg:row-span-2", art: "-mx-2 -mb-8 flex flex-1 flex-col pt-10 sm:mx-0 sm:-mb-10" },
   { cell: "lg:col-span-5", art: "mt-auto pt-8" },
   { cell: "lg:col-span-5", art: "mt-auto pt-8" },
-  { cell: "lg:col-span-5 lg:row-span-2", art: "mt-auto pt-10" },
-  { cell: "lg:col-span-7", art: "mt-auto pt-8 flex justify-end" },
-  { cell: "lg:col-span-7", art: "mt-auto pt-8" },
 ] as const;
 
 type ServicesBentoProps = { items: readonly Service[]; art: ServiceArtLabels; cardCta: string; locale: Locale };

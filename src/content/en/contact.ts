@@ -57,12 +57,9 @@ export const contact: typeof es = {
       { value: "other", label: "Something else" },
     ],
     serviceOptions: [
-      { value: "web", label: "Custom web development" },
-      { value: "fullstack", label: "Full stack development" },
-      { value: "automation", label: "Process automation" },
-      { value: "qa", label: "QA and testing" },
-      { value: "consulting", label: "Technology consulting" },
-      { value: "maintenance", label: "Maintenance and evolution" },
+      { value: "web", label: "Custom website or application" },
+      { value: "ai", label: "AI automation" },
+      { value: "qa", label: "Quality and testing" },
       { value: "other", label: "I'm not sure yet" },
     ],
     budgetOptions: [

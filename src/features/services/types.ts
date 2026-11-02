@@ -1,8 +1,8 @@
 import type { ServiceValue } from "@/lib/validations/lead";
 
-export type ServiceVisual = "web" | "stack" | "flow" | "tests" | "compass" | "history";
+export type ServiceVisual = "web" | "flow" | "tests";
 
-export type ServiceArtLabels = { layers: readonly string[]; tests: readonly string[] };
+export type ServiceArtLabels = { tests: readonly string[] };
 
 export type Service = {
   /** Used as the anchor on /servicios. */

@@ -3,6 +3,16 @@ import type { faq as es } from "../es/faq";
 export const faq: typeof es = {
   items: [
     {
+      question: "What does building with AI and spec-driven development mean?",
+      answer:
+        "It means the process starts from a written specification: what the software must do and how we'll know it does. On that basis, AI agents speed up development and testing, while I direct and review every technical decision. AI brings speed; the specification and tests bring reliability.",
+    },
+    {
+      question: "What happens to my data if AI is used?",
+      answer:
+        "Before starting, we decide together which data can go through AI tools and which can't. When information is sensitive, we can work with test data or with local models running on your own infrastructure.",
+    },
+    {
       question: "How much does a project cost?",
       answer:
         "It depends on the scope, the complexity and the integrations involved. That's why I don't work from a fixed price list: first I understand what you need, then I send you a written proposal with the scope and budget in detail. If your budget is limited, we'll find a first version that fits.",
@@ -18,9 +28,9 @@ export const faq: typeof es = {
         "Of course. You don't need a requirements document or technical knowledge. We start from your idea, bring it down to earth and define a realistic first version. If after looking at it I don't think it's worth building, I'll tell you.",
     },
     {
-      question: "Can you improve software I already have?",
+      question: "Can you improve software I already have, even if AI built it?",
       answer:
-        "Yes. We usually start by reviewing the current state: code, architecture, bugs and risks. With that information we decide whether to evolve what's there, rewrite part of it or simply add tests before moving forward.",
+        "Yes. We usually start with a technical review of the current state: code, architecture, bugs and risks. With that information we decide whether to evolve what's there, rewrite part of it or simply add tests before moving forward. You can also hire me for just that review.",
     },
     {
       question: "Do you offer maintenance after delivery?",

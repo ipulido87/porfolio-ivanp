@@ -85,7 +85,7 @@ describe("ContactForm steps", () => {
 
     await chooseStage(user);
 
-    expect(await screen.findByRole("radio", { name: "QA y pruebas" })).toBeChecked();
+    expect(await screen.findByRole("radio", { name: "Calidad y pruebas" })).toBeChecked();
   });
 
   it("keeps answers when going back", async () => {
