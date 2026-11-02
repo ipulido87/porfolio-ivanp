@@ -20,7 +20,7 @@ GSAP and Three.js are not used: nothing here needed them.
 
 ## Getting started
 
-Requires Node 20.9+ and pnpm.
+Requires Node 22.13+ and pnpm 11 (pinned in `package.json`).
 
 ```bash
 pnpm install
