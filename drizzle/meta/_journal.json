@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1793615443876,
+      "tag": "0000_init_leads",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1793618041719,
+      "tag": "0001_add_lead_locale_and_stage",
+      "breakpoints": true
+    }
+  ]
+}

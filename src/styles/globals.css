@@ -1,0 +1,260 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------
+   Design tokens
+   --------------------------------------------------------------- */
+@theme {
+  --color-ink: #09090f;
+  --color-ink-2: #12121c;
+  --color-surface: #191925;
+  --color-surface-2: #21212f;
+  --color-text: #f5f5f7;
+  --color-muted: #a1a1b5;
+  --color-line: rgb(245 245 247 / 0.09);
+  --color-line-strong: rgb(245 245 247 / 0.18);
+  --color-purple: #8b5cf6;
+  /* Lighter purple for small text: #8B5CF6 is reserved for large accents. */
+  --color-purple-soft: #b49cfa;
+  --color-cyan: #22d3ee;
+  --color-danger: #fb7185;
+  --color-success: #4ade80;
+
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --text-display: clamp(2.6rem, 1.55rem + 4.4vw, 5.5rem);
+  --text-hero: clamp(2.5rem, 1.35rem + 3.55vw, 4.875rem);
+  --text-title: clamp(2rem, 1.4rem + 2.6vw, 3.75rem);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-soft: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --breakpoint-xs: 26rem;
+
+  --animate-float-in: float-in 0.5s var(--ease-out-expo) both;
+  --animate-sweep: sweep 3.2s var(--ease-in-out-soft) infinite;
+
+  @keyframes float-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px) scale(0.92);
+    }
+  }
+  @keyframes sweep {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(320%);
+    }
+  }
+}
+
+/* ---------------------------------------------------------------
+   Base
+   --------------------------------------------------------------- */
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--color-line);
+  }
+
+  html {
+    background: var(--color-ink);
+    color-scheme: dark;
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    min-height: 100dvh;
+    background: var(--color-ink);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 1.04;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: rgb(139 92 246 / 0.45);
+    color: var(--color-text);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-cyan);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ---------------------------------------------------------------
+   Signature utilities
+   --------------------------------------------------------------- */
+@utility container-site {
+  width: 100%;
+  max-width: 88rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (width >= 40rem) {
+    padding-inline: 2rem;
+  }
+  @media (width >= 80rem) {
+    padding-inline: 3.5rem;
+  }
+}
+
+@utility section-y {
+  padding-block: clamp(5rem, 3.5rem + 7vw, 10rem);
+}
+
+/* Technical caption: the mono voice of the brand. */
+@utility label-mono {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+@utility text-gradient {
+  background: linear-gradient(100deg, var(--color-text) 10%, var(--color-purple-soft) 55%, var(--color-cyan) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Blueprint grid, faded towards the edges so it never reads as a pattern fill. */
+@utility bg-blueprint {
+  background-image:
+    linear-gradient(to right, rgb(245 245 247 / 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(245 245 247 / 0.035) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black, transparent 78%);
+}
+
+/* Engineering-drawing corner marks. */
+@utility corner-ticks {
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    pointer-events: none;
+    border-color: var(--color-line-strong);
+    transition: border-color 0.3s;
+  }
+  &::before {
+    top: -1px;
+    left: -1px;
+    border-top-width: 1px;
+    border-left-width: 1px;
+  }
+  &::after {
+    right: -1px;
+    bottom: -1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+  }
+}
+
+/* Card with a hairline that catches the accent on hover. */
+@utility card-surface {
+  background: linear-gradient(160deg, rgb(33 33 47 / 0.75), rgb(18 18 28 / 0.75));
+  border: 1px solid var(--color-line);
+  transition:
+    border-color 0.3s,
+    background-color 0.3s;
+  &:hover,
+  &:focus-within {
+    border-color: rgb(139 92 246 / 0.45);
+  }
+}
+
+/* Accordion: content stays in the DOM (for crawlers) and animates via grid rows. */
+.accordion-panel {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition:
+    grid-template-rows 0.35s var(--ease-out-expo),
+    visibility 0.35s;
+}
+.accordion-panel[data-state="closed"] {
+  grid-template-rows: 0fr;
+  visibility: hidden;
+}
+
+.prose-legal h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+.prose-legal p,
+.prose-legal ul {
+  margin-bottom: 1rem;
+  color: var(--color-muted);
+}
+.prose-legal ul {
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+.prose-legal li {
+  margin-bottom: 0.4rem;
+}
+.prose-legal strong {
+  color: var(--color-text);
+  font-weight: 500;
+}
+.prose-legal a {
+  color: var(--color-cyan);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose-legal mark {
+  padding: 0.05em 0.35em;
+  border-radius: 3px;
+  background: rgb(139 92 246 / 0.22);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
