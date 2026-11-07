@@ -40,12 +40,12 @@ const items: Service[] = [
     title: "Quality for AI-built software",
     summary: "Automated tests and audits that tell you your software works, whether a person or an AI wrote it.",
     description:
-      "This is my specialty. I define a quality strategy based on business risk and implement tests built into your delivery process. I also audit AI-generated applications and fix what's needed to take them to production safely.",
+      "This is my specialty. I define a quality strategy based on business risk and implement tests built into your delivery process. I also audit AI-generated applications and fix what's needed to take them to production safely. To move faster, I use an in-house agent that explores your site and generates a first version of the tests, which I review before integrating them.",
     visual: "tests",
     includes: [
       "Test strategy based on business risk",
       "E2E and API testing with Playwright and RestAssured",
-      "AI test generation from requirements",
+      "In-house agent that generates E2E tests from a described flow",
       "Audit and rescue of AI-built applications",
     ],
     idealFor: "Growing products where every release feels like a risk.",

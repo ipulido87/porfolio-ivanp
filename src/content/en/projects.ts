@@ -43,12 +43,19 @@ const items: Project[] = [
   },
   {
     slug: "api-and-e2e-test-automation",
-    name: "API and E2E test automation",
-    kind: "concept",
-    category: "Software quality",
-    summary: "An example of an automated test solution built into a continuous delivery process.",
-    scope: ["API testing", "E2E browser flows", "Runs in continuous integration", "Result reporting"],
-    stack: ["Playwright", "RestAssured", "GitHub Actions"],
+    name: "Autonomous E2E testing agent",
+    kind: "personal",
+    category: "Software quality · In-house tool",
+    summary:
+      "A command-line tool that takes a user flow described in plain language and a URL, explores the real site with Playwright and generates a TypeScript test project using BDD and the Page Object Model.",
+    scope: [
+      "Explores the real site through Playwright MCP",
+      "Gherkin scenarios from the described flow",
+      "TypeScript Page Objects",
+      "New project or added to an existing one",
+      "Local templates when no AI is available",
+    ],
+    stack: ["Python", "Pydantic AI", "Playwright MCP", "TypeScript", "playwright-bdd", "Cucumber.js"],
     visual: "pipeline",
   },
   {

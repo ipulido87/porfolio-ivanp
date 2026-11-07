@@ -61,12 +61,19 @@ const items: Project[] = [
   },
   {
     slug: "automatizacion-de-pruebas",
-    name: "Automatización de pruebas API y E2E",
-    kind: "concept",
-    category: "Calidad de software",
-    summary: "Ejemplo de solución de pruebas automáticas integrada en un proceso de entrega continua.",
-    scope: ["Pruebas de API", "Flujos E2E en navegador", "Ejecución en integración continua", "Informes de resultados"],
-    stack: ["Playwright", "RestAssured", "GitHub Actions"],
+    name: "Agente autónomo de pruebas E2E",
+    kind: "personal",
+    category: "Calidad de software · Herramienta propia",
+    summary:
+      "Herramienta de línea de comandos que recibe un flujo descrito en lenguaje natural y una URL, explora la web real con Playwright y genera un proyecto de pruebas en TypeScript con BDD y Page Object Model.",
+    scope: [
+      "Exploración de la web real con Playwright MCP",
+      "Escenarios Gherkin a partir del flujo descrito",
+      "Page Objects en TypeScript",
+      "Proyecto nuevo o integrado en uno existente",
+      "Plantillas locales cuando no hay IA disponible",
+    ],
+    stack: ["Python", "Pydantic AI", "Playwright MCP", "TypeScript", "playwright-bdd", "Cucumber.js"],
     visual: "pipeline",
   },
   {

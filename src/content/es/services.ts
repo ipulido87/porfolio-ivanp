@@ -39,12 +39,12 @@ const items: Service[] = [
     title: "Calidad para software con IA",
     summary: "Pruebas automáticas y auditorías para saber que tu software funciona, lo haya escrito una persona o una IA.",
     description:
-      "Es mi especialidad. Defino una estrategia de calidad según el riesgo de negocio e implanto pruebas integradas en tu proceso de entrega. También audito aplicaciones generadas con IA y corrijo lo necesario para llevarlas a producción con seguridad.",
+      "Es mi especialidad. Defino una estrategia de calidad según el riesgo de negocio e implanto pruebas integradas en tu proceso de entrega. También audito aplicaciones generadas con IA y corrijo lo necesario para llevarlas a producción con seguridad. Para acelerar, uso un agente propio que explora tu web y genera la primera versión de las pruebas, que reviso antes de integrarlas.",
     visual: "tests",
     includes: [
       "Estrategia de pruebas según el riesgo de negocio",
       "Pruebas E2E y de API con Playwright y RestAssured",
-      "Generación de pruebas con IA a partir de requisitos",
+      "Agente propio que genera pruebas E2E a partir del flujo descrito",
       "Auditoría y rescate de aplicaciones hechas con IA",
     ],
     idealFor: "Productos en crecimiento en los que cada entrega supone un riesgo.",

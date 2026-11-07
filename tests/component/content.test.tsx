@@ -22,8 +22,9 @@ describe("project cards", () => {
     expect(screen.getByText(projects.labels.placeholder)).toBeInTheDocument();
   });
 
-  it("gives every real project a screenshot and a safe external link", () => {
-    for (const project of projects.items.filter((item) => item.kind !== "concept")) {
+  // A personal tool kept in a private repository has nothing public to link to.
+  it("gives every published project a screenshot and a safe external link", () => {
+    for (const project of projects.items.filter((item) => item.kind !== "concept" && item.url)) {
       const { unmount } = render(<ProjectCard project={project} locale="es" />);
       const link = screen.getByRole("link", { name: /Visitar/ });
 
@@ -33,6 +34,20 @@ describe("project cards", () => {
       expect(screen.getByRole("img", { name: project.image!.alt })).toBeInTheDocument();
       expect(screen.queryByText(projects.labels.placeholder)).not.toBeInTheDocument();
       unmount();
+    }
+  });
+
+  it("gives every live project a public link", () => {
+    for (const project of projects.items.filter((item) => item.kind === "live")) {
+      expect(project.url).toBeDefined();
+    }
+  });
+
+  it("presents the testing agent as a real tool, in every language", () => {
+    for (const locale of locales) {
+      const project = getContent(locale).projects.items[3];
+      expect(project?.slug).toMatch(/automatizacion-de-pruebas|api-and-e2e-test-automation/);
+      expect(project?.kind).toBe("personal");
     }
   });
 
